@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <article class="article">
+            <h1 class="article__h1 offscreen">Our Contact Form</h1>
+            <figure class="article__figure">
+                <img src="img/contact-2000x2000.png" alt="Contact Us Image" title="Feel free to contact us!"
+                    width="2000" height="2000">
+            </figure>
+            <form class="article__form form" action="http://httpbin.org/post" method="post">
+                <p class="form__title">Contact Us</p>
+                <p class="form__input-container">
+                    <input name="name" id="name" type="text" autocomplete="on" required>
+                    <label for="name">Your Name</label>
+                </p>
+                <p class="form__input-container">
+                    <input name="email" id="email" type="email" autocomplete="on" required>
+                    <label for="email">Your Email</label>
+                </p>
+                <p class="form__textarea-container">
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                    <label for="message">Your Message</label>
+                </p>
+                <p class="form__button-container">
+                    <button type="submit">Send Message</button>
+                </p>
+            </form>
+        </article>
+    </div>
+</body>
+
+</html>
