@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* || RESET */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* || VARIABLES */
+
+:root {
+    /* FONTS */
+    --FF: "Montserrat", sans-serif;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLORS */
+    --BGCOLOR1: #eee7fb;
+    --BGCOLOR2: #fff;
+    --BGCOLOR3: #d3beff;
+    --BORDER-COLOR: #818dfe;
+    --BUTTON-COLOR: #818dfe;
+    --BUTTON-HOVER: #4b4df8;
+    --BUTTON-ACTIVE: #363b8c;
+    --LABEL-IN-COLOR: #8b8b8b;
+    --LABEL-OUT-COLOR: #818dfe;
+    --HEADING-COLOR: #4b4df8;
+
+    /* BORDERS */
+    --BORDER-RADIUS: 6px;
+    --BORDERS: 2px solid transparent;
+
+    /* STANDARD PADDING */
+    --PADDING-SIDE: 5%;
+    --PADDING-TOP-BOTTOM: 0.5em;
+
+    /* STANDARD MARGIN */
+    --MARGIN: clamp(1em, 2.5vh, 1.5em);
+}
+
+/* || UTILITY CLASS */
+
+.offscreen {
+    position: absolute;
+    top: -10000px
+}
+
+/* || GENERAL STYLES */
+
+html {
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR1);
+}
+
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+body::before {
+    background-color: var(--BGCOLOR3);
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.container {
+    background-color: var(--BGCOLOR2);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: var(--MARGIN);
+    max-width: 1024px;
+    width: 100%;
+    z-index: 12;
+}
+
+.container .article {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em var(--PADDING-SIDE);
+}
+
+.article .article__figure {
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+.article__figure img {
+    height: auto;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.article .form__title {
+    color: var(--HEADING-COLOR);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+
+.article form {
+    margin-right: var(--MARGIN);
+    width: 100%;
+}
+
+/* || INPUTS */
+
+.article .form__input-container {
+    height: 50px;
+    margin: 1em 0;
+    position: relative;
+    width: 100%;
+}
+
+.article .form__input-container input {
+    background-color: var(--BGCOLOR1);
+    border-radius: var(--BORDER-RADIUS);
+    border: var(--BORDERS);
+    font-size: var(--FS);
+    height: 100%;
+    outline: none;
+    padding-left: var(--PADDING-SIDE);
+    position: absolute;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.article .form__input-container input:focus,
+.article .form__input-container input:valid {
+    background-color: var(--BGCOLOR2);
+    border-color: var(--BORDER-COLOR);
+}
+
+.article .form__input-container label {
+    color: var(--LABEL-IN-COLOR);
+    font-size: var(--FS);
+    left: 18px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.article .form__input-container input:focus~label,
+.article .form__input-container input:valid~label {
+    background-color: var(--BGCOLOR2);
+    color: var(--LABEL-OUT-COLOR);
+    font-weight: 500;
+    font-size: 1rem;
+    left: 12px;
+    top: 0;
+}
+
+/* || TEXTAREA */
+
+.article .form__textarea-container {
+    min-height: 100px;
+    position: relative;
+}
+
+.article .form__textarea-container textarea {
+    background-color: var(--BGCOLOR1);
+    border-radius: var(--BORDER-RADIUS);
+    border: var(--BORDERS);
+    font-size: var(--FS);
+    height: 100%;
+    outline: none;
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+    position: absolute;
+    resize: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.article .form__textarea-container textarea:focus,
+.article .form__textarea-container textarea:valid {
+    background-color: var(--BGCOLOR2);
+    border-color: var(--BORDER-COLOR);
+}
+
+.article .form__textarea-container label {
+    color: var(--LABEL-IN-COLOR);
+    font-size: var(--FS);
+    left: 18px;
+    pointer-events: none;
+    position: absolute;
+    top: 6px;
+    transition: all 0.3s ease;
+}
+
+.article .form__textarea-container textarea:focus~label,
+.article .form__textarea-container textarea:valid~label {
+    background-color: var(--BGCOLOR2);
+    color: var(--LABEL-OUT-COLOR);
+    font-size: 1rem;
+    font-weight: 500;
+    left: 12px;
+    top: -10px;
+}
+
+.article .form__button-container {
+    height: auto;
+    margin: 1em 0;
+    position: relative;
+    width: 100%;
+}
+
+.article .form__button-container button[type="submit"] {
+    background-color: var(--BUTTON-COLOR);
+    border-radius: var(--BORDER-RADIUS);
+    border: none;
+    color: #f4f4f4;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.article .form__button-container button[type="submit"]:hover {
+    background-color: var(--BUTTON-HOVER);
+}
+
+.article .form__button-container button[type="submit"]:active {
+    background-color: var(--BUTTON-ACTIVE);
+}
+
+/* || MEDIA QUERIES */
+@media (max-width: 768px) {
+    .article form {
+        margin: var(--MARGIN);
+        width: 100%;
+    }
+}
