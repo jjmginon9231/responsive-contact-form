@@ -126,7 +126,7 @@ body::before {
 
 .article form {
     margin-right: var(--MARGIN);
-    width: 100%;
+    width: 45%;
 }
 
 /* || INPUTS */
@@ -254,7 +254,32 @@ body::before {
 }
 
 /* || MEDIA QUERIES */
+@media (max-width: 1034px) {
+    .article .article__figure {
+        margin: 0 auto;
+        max-width: 360px;
+    }
+
+    .article form {
+        margin: var(--MARGIN);
+        width: 40%;
+    }
+}
+
 @media (max-width: 768px) {
+    .article form {
+        margin: var(--MARGIN);
+        width: 100%;
+    }
+}
+
+/* ASUS ZENBOOK FOLD - PORTRAIT */
+
+@media (min-width: 853px) and (max-width: 853px) and (min-height: 1280px) and (max-height: 1280px) {
+    .article .article__figure {
+        max-width: 480px;
+    }
+
     .article form {
         margin: var(--MARGIN);
         width: 100%;
