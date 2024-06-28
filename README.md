@@ -17,3 +17,8 @@ This project is a responsive contact form inspired by the tutorial from CodingLa
 ## Acknowledgments
 - [CodingLab/CodingNepal](https://www.codingnepalweb.com/) - For the initial contact form design inspiration.
 - [Dave Gray](https://github.com/gitdagray) - For the valuable HTML and CSS best practices.
+
+## Contact
+Feel free to reach out for collaborations or work opportunities.
+
+[LinkedIn](https://www.linkedin.com/in/john-jerry-ginon-0b5539314/) | [GitHub](https://github.com/jjmginon9231/) | [Upwork](https://www.upwork.com/freelancers/~01432eb5f90e315e15?mp_source=share)
