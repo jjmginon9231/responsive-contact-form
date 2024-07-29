@@ -42,8 +42,8 @@ textarea {
     --HEADING-COLOR: #4b4df8;
 
     /* BORDERS */
-    --BORDER-RADIUS: 6px;
-    --BORDERS: 2px solid transparent;
+    --BORDER-RADIUS: 8px;
+    --BORDERS: 4px solid transparent;
 
     /* STANDARD PADDING */
     --PADDING-SIDE: 5%;
@@ -89,7 +89,7 @@ body::before {
 
 .container {
     background-color: var(--BGCOLOR2);
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: var(--MARGIN);
     max-width: 1024px;
